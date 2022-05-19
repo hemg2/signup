@@ -70,7 +70,7 @@ extension SacondViewController: UITextFieldDelegate {
         view.endEditing(true)
     }
     private func configureTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SacondViewController.handleTap))
         view.addGestureRecognizer(tapGesture)
     }
 
