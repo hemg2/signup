@@ -8,12 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+ 
+    
+    @IBOutlet weak var ieField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    @IBAction func touchUpSetButton(_ sender: UIButton) {
+        
+        UserInFormation.shared.name = ieField.text
+        //UserInFormation.shared.id = idField.text 이게 맞는데 에러가 뜬다?? 왜 와이?
+        UserInFormation.shared.Password = passwordField.text
     }
-
-
+    
+    @IBAction func tapView(_ sender:UITapGestureRecognizer) {
+        self.view.endEditing(true)
 }
-
+    
+  //  let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: ViewController, action: #selector(self.tapView(_:)))
+                                                                
+ //   self.view.addGestureRecognizer(tapGesture)
+}

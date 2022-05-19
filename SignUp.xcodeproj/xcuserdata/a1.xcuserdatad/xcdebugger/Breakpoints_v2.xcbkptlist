@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0336B3B8-FFC4-412E-8E4F-4BC43ADF6FA2"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F64E471F-45F6-428A-8DDA-7BBF91173BAB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SignUp/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "F64E471F-45F6-428A-8DDA-7BBF91173BAB - e8ea5c402349a48d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SignUp.ViewController.ieField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "SignUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1/code/SignUp/SignUp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "F64E471F-45F6-428A-8DDA-7BBF91173BAB - 77c2b23a7a9cfb99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SignUp.ViewController.ieField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "SignUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1/code/SignUp/SignUp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "F64E471F-45F6-428A-8DDA-7BBF91173BAB - bf0c5550f71c7eca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SignUp.ViewController.ieField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "SignUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1/code/SignUp/SignUp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "F64E471F-45F6-428A-8DDA-7BBF91173BAB - f4707f667e9501b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SignUp.ViewController.ieField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SignUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1/code/SignUp/SignUp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "F64E471F-45F6-428A-8DDA-7BBF91173BAB - fe62c73ad5323a4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SignUp.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SignUp.ViewController"
+                  moduleName = "SignUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1/code/SignUp/SignUp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "F64E471F-45F6-428A-8DDA-7BBF91173BAB - c3630b23ed36a67a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SignUp.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SignUp.ViewController&gt;"
+                  moduleName = "SignUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a1/code/SignUp/SignUp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "E5ED490D-B8B5-4443-AF8A-A3C19C332A6A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = ""
+            moduleName = "">
+            <Locations>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
