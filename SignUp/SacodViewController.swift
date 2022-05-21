@@ -18,7 +18,8 @@ class SacondViewController: UIViewController, UINavigationControllerDelegate, UI
 //        {
 ///      //패스워가 같아서 참이면 버튼이 활성화 되야한다 activate
 //        true = touchUpsetButton(activate)
-//     } else false =  {touchUpsetButton()
+//     } else false =  {touchUpsetButton(비활성화)
+        // }{else false : idTextFiedl ="" , 비활성화
 //       }
         view.endEditing(true)
     }
@@ -36,11 +37,10 @@ class SacondViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+//   저장소가없다?     self.idTextField.text = UserInFormation.shared.id
+//        self.passwordTextField.text = UserInFormation.shared.password
     }
     @IBAction func touchUpsetButton(_ sender: UIButton) {
-            self.idTextField.text = UserInFormation.shared.id
-            self.passwordTextField.text = UserInFormation.shared.password
-            
     }
     @IBAction func tapView(_ sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
