@@ -7,11 +7,11 @@
 
 import Foundation
 
-class UserInFormation {
-    static let shared: UserInFormation = UserInFormation()
-    
-    var name: String?
-    var Password: String?
-    var CheckPassword: String?
-    
-}
+//class UserInFormation {
+//    static let shared: UserInFormation = UserInFormation()
+//
+//    var id: String?
+//    var Password: String?
+//    var CheckPassword: String?
+//
+//}

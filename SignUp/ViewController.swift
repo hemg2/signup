@@ -10,14 +10,18 @@ import UIKit
 class ViewController: UIViewController {
  
     
-    @IBOutlet weak var ieField: UITextField!
+    @IBOutlet weak var idField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func touchUpSetButton(_ sender: UIButton) {
+        UserInFormation.shared.id = idField.text
+        UserInFormation.shared.password = passwordField.text
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.idField.text = UserInFormation.shared.id
+        self.passwordField.text = UserInFormation.shared.password
+        super.viewWillAppear(animated)
         
-        UserInFormation.shared.name = ieField.text
-        //UserInFormation.shared.id = idField.text 이게 맞는데 에러가 뜬다?? 왜 와이?
-        UserInFormation.shared.Password = passwordField.text
     }
     
     @IBAction func tapView(_ sender:UITapGestureRecognizer) {

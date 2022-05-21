@@ -9,14 +9,20 @@ import UIKit
 
 class SacondViewController: UIViewController, UINavigationControllerDelegate, UITextViewDelegate {
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var checkPasswordTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func loginTapped(_ sender: Any) {
+//     if passwordTextField == checkPasswordTextField //조건
+//        {
+///      //패스워가 같아서 참이면 버튼이 활성화 되야한다 activate
+//        true = touchUpsetButton(activate)
+//     } else false =  {touchUpsetButton()
+//       }
         view.endEditing(true)
     }
-    
+
     
     lazy var imagePicker: UIImagePickerController = {
         let picker: UIImagePickerController = UIImagePickerController()
@@ -25,12 +31,16 @@ class SacondViewController: UIViewController, UINavigationControllerDelegate, UI
         return picker
     }()
     
-    
     @IBAction func touchUPSelectImageButton(_ sender: UIButton) {
         self.present(self.imagePicker, animated: true, completion: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    @IBAction func touchUpsetButton(_ sender: UIButton) {
+            self.idTextField.text = UserInFormation.shared.id
+            self.passwordTextField.text = UserInFormation.shared.password
+            
     }
     @IBAction func tapView(_ sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -61,7 +71,7 @@ extension SacondViewController: UITextFieldDelegate {
         super.didReceiveMemoryWarning()
     }
     private func configureTextFiede() {
-        nameTextField.delegate = self
+        idTextField.delegate = self
         passwordTextField.delegate = self
         checkPasswordTextField.delegate = self
     }
@@ -78,10 +88,10 @@ extension SacondViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-    }
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-    }
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//
+//    }
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//
+//    }
 }
