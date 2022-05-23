@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
     }
-    
+   
     @IBAction func tapView(_ sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
 }

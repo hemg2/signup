@@ -40,6 +40,10 @@ class threeViewController: UIViewController {
     
     @IBAction func popToPrev() {
         self.dismiss(animated: true, completion: nil)
+//        UserInFormation.self.shared.id
+//        UserInFormation.self.shared.password
+//        passwordTextField.delegate = self
+//        checkPasswordTextField.delegate = self
 //        UserInFormation.shared.id = " "
 //        UserInFormation.shared.password = " "
         self.navigationController?.popViewController(animated: true)

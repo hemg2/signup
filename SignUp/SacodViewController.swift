@@ -14,18 +14,25 @@ class SacondViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var checkPasswordTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func loginTapped(_ sender: Any) {
-//        if passwordTextField == checkPasswordTextField : true { //조건
-//            ///      //패스워가 같아서 참이면 버튼이 활성화 되야한다 activate
-//
-//        } else {
-//            }
+        
+        //        let ip == passwordTextField, checkPasswordTextField
+        //        if ip == true {
+        //            self.passwordTextField : true
+        //            self.checkPasswordTextField : true
+        //                .dismiss(animated: String, completion: nil)
+        
+        //조건
+        //            ///      //패스워가 같아서 참이면 버튼이 활성화 되야한다 activate
+        //
+        //        } else {
     
-    
-    //     true = touchUpsetButton(activate)
-    //     } else false =  {touchUpsetButton(비활성화)
-    // }{else false : idTextFiedl ="" , 비활성화
-    //       }
-    view.endEditing(true)
+
+
+//     true = touchUpsetButton(activate)
+//     } else false =  {touchUpsetButton(비활성화)
+// }{else false : idTextFiedl ="" , 비활성화
+//       }
+view.endEditing(true)
 }
 
 
@@ -71,6 +78,9 @@ extension SacondViewController: UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFiede()
+        idTextField.delegate = self
+        passwordTextField.delegate = self
+        checkPasswordTextField.delegate = self
         
     }
     override func didReceiveMemoryWarning() {

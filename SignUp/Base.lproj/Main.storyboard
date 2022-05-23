@@ -51,7 +51,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="touchUpSetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yj9-yD-3Jt"/>
-                                    <segue destination="xK8-1I-mf6" kind="show" id="8TF-MZ-bMG"/>
+                                    <segue destination="xK8-1I-mf6" kind="modal" id="8TF-MZ-bMG"/>
                                 </connections>
                             </button>
                         </subviews>
