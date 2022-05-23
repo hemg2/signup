@@ -14,37 +14,43 @@ class SacondViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var checkPasswordTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func loginTapped(_ sender: Any) {
-//     if passwordTextField == checkPasswordTextField //조건
-//        {
-///      //패스워가 같아서 참이면 버튼이 활성화 되야한다 activate
-//        true = touchUpsetButton(activate)
-//     } else false =  {touchUpsetButton(비활성화)
-        // }{else false : idTextFiedl ="" , 비활성화
-//       }
-        view.endEditing(true)
-    }
+//        if passwordTextField == checkPasswordTextField : true { //조건
+//            ///      //패스워가 같아서 참이면 버튼이 활성화 되야한다 activate
+//
+//        } else {
+//            }
+    
+    
+    //     true = touchUpsetButton(activate)
+    //     } else false =  {touchUpsetButton(비활성화)
+    // }{else false : idTextFiedl ="" , 비활성화
+    //       }
+    view.endEditing(true)
+}
 
-    
-    lazy var imagePicker: UIImagePickerController = {
-        let picker: UIImagePickerController = UIImagePickerController()
-        picker.sourceType = .photoLibrary
-        picker.delegate = self
-        return picker
-    }()
-    
-    @IBAction func touchUPSelectImageButton(_ sender: UIButton) {
-        self.present(self.imagePicker, animated: true, completion: nil)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//   저장소가없다?     self.idTextField.text = UserInFormation.shared.id
-//        self.passwordTextField.text = UserInFormation.shared.password
-    }
-    @IBAction func touchUpsetButton(_ sender: UIButton) {
-    }
-    @IBAction func tapView(_ sender:UITapGestureRecognizer) {
-        self.view.endEditing(true)
-    }
+
+lazy var imagePicker: UIImagePickerController = {
+    let picker: UIImagePickerController = UIImagePickerController()
+    picker.sourceType = .photoLibrary
+    picker.delegate = self
+    return picker
+}()
+
+@IBAction func touchUPSelectImageButton(_ sender: UIButton) {
+    self.present(self.imagePicker, animated: true, completion: nil)
+}
+override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.idTextField.text = UserInFormation.shared.id
+    self.passwordTextField.text = UserInFormation.shared.password
+}
+@IBAction func touchUpsetButton(_ sender: UIButton) {
+    UserInFormation.shared.id = idTextField.text
+    UserInFormation.shared.password = passwordTextField.text
+}
+@IBAction func tapView(_ sender:UITapGestureRecognizer) {
+    self.view.endEditing(true)
+}
 }
 
 extension SacondViewController: UIImagePickerControllerDelegate {
@@ -83,15 +89,15 @@ extension SacondViewController: UITextFieldDelegate {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SacondViewController.handleTap))
         view.addGestureRecognizer(tapGesture)
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//
-//    }
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//
-//    }
+    //    func textFieldDidBeginEditing(_ textField: UITextField) {
+    //
+    //    }
+    //    func textFieldDidEndEditing(_ textField: UITextField) {
+    //
+    //    }
 }

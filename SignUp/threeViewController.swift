@@ -18,7 +18,7 @@ class threeViewController: UIViewController {
         return formatter
     }()
     @IBAction func didDatePickerValueChanged(_ sender: UIDatePicker) {
-    
+        
         
         let date: Date = self.datePicker.date
         let dateSting: String = self.dateFormatter.string(from: date)
@@ -27,25 +27,35 @@ class threeViewController: UIViewController {
     }
     @IBAction func dismissModal() {
         self.navigationController?.popViewController(animated: true)
+        
     }
     @IBAction func tapView(_ sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
     //가입 버튼 넘기기 디스미스
     @IBAction func touchUpNeatButton (_: UIButton) {
-     self.dismiss(animated: true, completion: nil)
-//         self.idTextField.text = UserInFormation.shared.id
-//         self.passwordTextField.text = UserInFormation.shared.password
+        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func popToPrev() {
+        self.dismiss(animated: true, completion: nil)
+//        UserInFormation.shared.id = " "
+//        UserInFormation.shared.password = " "
+        self.navigationController?.popViewController(animated: true)
     }
 }
-/* *@IBAction func poptoprev() {
- self.navigationController?.popViewController(animated: true)
- }*/
+
+
+
+//     @IBAction func poptoprev() {
+//    self.navigationController?.popViewController(animated: true)
+//}
 
 
 /*모달 푸쉬 팝
-책이 있다 푸쉬 네이게이션 푸쉬 다음페이지 쇼 이지 푸쉬
-팝은 전페이지 (이전페이지)
+ 책이 있다 푸쉬 네이게이션 푸쉬 다음페이지 쇼 이지 푸쉬
+ 팝은 전페이지 (이전페이지)
  모달 보고 있는 책에 새책을 올리는거다 그래서 기존책을 볼수 없다.
  디스미스 위에있는 책을 치우는거다
  모달은 책을 올리는것
@@ -67,4 +77,4 @@ class threeViewController: UIViewController {
  && 아이디에 입력칸이 비어 있지 않을때
  ** 아닐때 !=
  else
-*/
+ */

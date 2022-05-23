@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.idField.text = UserInFormation.shared.id
         self.passwordField.text = UserInFormation.shared.password
+        UserInFormation.shared.id = idField.text
+        UserInFormation.shared.password = passwordField.text
         super.viewWillAppear(animated)
         
     }
