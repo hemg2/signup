@@ -7,31 +7,18 @@
 
 import UIKit
 
-class SacondViewController: UIViewController, UINavigationControllerDelegate, UITextViewDelegate {
+class SacondViewController: UIViewController, UINavigationControllerDelegate {
     
+    @IBOutlet weak var nextBtton: UIButton!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var checkPasswordTextField: UITextField!
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func loginTapped(_ sender: Any) {
-        
-        //        let ip == passwordTextField, checkPasswordTextField
-        //        if ip == true {
-        //            self.passwordTextField : true
-        //            self.checkPasswordTextField : true
-        //                .dismiss(animated: String, completion: nil)
-        
-        //조건
-        //            ///      //패스워가 같아서 참이면 버튼이 활성화 되야한다 activate
-        //
-        //        } else {
+        UserInFormation.self.shared.id = idTextField.text
+        UserInFormation.self.shared.password = passwordTextField.text
     
-
-
-//     true = touchUpsetButton(activate)
-//     } else false =  {touchUpsetButton(비활성화)
-// }{else false : idTextFiedl ="" , 비활성화
-//       }
 view.endEditing(true)
 }
 
@@ -46,11 +33,7 @@ lazy var imagePicker: UIImagePickerController = {
 @IBAction func touchUPSelectImageButton(_ sender: UIButton) {
     self.present(self.imagePicker, animated: true, completion: nil)
 }
-override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    self.idTextField.text = UserInFormation.shared.id
-    self.passwordTextField.text = UserInFormation.shared.password
-}
+
 @IBAction func touchUpsetButton(_ sender: UIButton) {
     UserInFormation.shared.id = idTextField.text
     UserInFormation.shared.password = passwordTextField.text
@@ -107,7 +90,12 @@ extension SacondViewController: UITextFieldDelegate {
     //    func textFieldDidBeginEditing(_ textField: UITextField) {
     //
     //    }
-    //    func textFieldDidEndEditing(_ textField: UITextField) {
-    //
-    //    }
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            if passwordTextField.text == checkPasswordTextField.text {
+                nextBtton.isEnabled = true
+            } else {
+                nextBtton.isEnabled = false
+            }
+    
+        }
 }

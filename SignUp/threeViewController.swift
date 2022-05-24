@@ -32,6 +32,12 @@ class threeViewController: UIViewController {
     @IBAction func tapView(_ sender:UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
+    @IBAction func popButton() {
+        self.dismiss(animated: true, completion: nil) //셀프 디스미스 이전 
+        UserInFormation.shared.id = ""
+        UserInFormation.shared.password = ""
+       
+    }
     //가입 버튼 넘기기 디스미스
     @IBAction func touchUpNeatButton (_: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -45,7 +51,7 @@ class threeViewController: UIViewController {
 //        passwordTextField.delegate = self
 //        checkPasswordTextField.delegate = self
 //        UserInFormation.shared.id = " "
-//        UserInFormation.shared.password = " "
+//        UserInFormation.shared.password = " "   취소 버튼
         self.navigationController?.popViewController(animated: true)
     }
 }

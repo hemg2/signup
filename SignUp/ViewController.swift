@@ -14,14 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func touchUpSetButton(_ sender: UIButton) {
-        UserInFormation.shared.id = idField.text
-        UserInFormation.shared.password = passwordField.text
     }
     override func viewWillAppear(_ animated: Bool) {
         self.idField.text = UserInFormation.shared.id
         self.passwordField.text = UserInFormation.shared.password
-        UserInFormation.shared.id = idField.text
-        UserInFormation.shared.password = passwordField.text
         super.viewWillAppear(animated)
         
     }
